@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { Button, Pressable } from 'native-base';
-import context from '../Context/Contex';
+import ContexProvider from '../Context/ContexProvider';
 
 const LoginButton = () => {
-    const dataContext = useContext(context)
-    const { email } = dataContext
+    const dataContext = useContext(ContexProvider)
+    const { login } = dataContext
+
     return (
         <>
             <Pressable>
@@ -15,7 +16,7 @@ const LoginButton = () => {
                             mx="auto" px="20" py="4"
                             rounded="25"
                             mt="5"
-                            onPress={() => console.log("My name is ", email)}
+                            onPress={() => login()}
                         >Login</Button>
                     )
                 }}
