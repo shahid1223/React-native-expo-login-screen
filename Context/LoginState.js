@@ -19,13 +19,10 @@ const LoginState = (props) => {
             });
             const json = await response.json()
             console.log(json);
-            if (json.success) {
+            if (json) {
                 // Save the auth token and redirect
                 localStorage.setItem('token', json.authtoken);
 
-            }
-            else {
-                alert("Invalid credentials");
             }
         } catch (error) {
             console.log(error)
