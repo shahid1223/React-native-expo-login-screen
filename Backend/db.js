@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const MONGOURI = "mongodb+srv://shahid:shahid@cluster0.zbodk.mongodb.net/React-Native?retryWrites=true&w=majority"
+const MONGOURI = ""
 
 const connectToMongo = () => {
     mongoose.connect(MONGOURI, () => {
